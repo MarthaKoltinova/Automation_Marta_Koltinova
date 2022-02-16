@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <style>
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+p{
+font-family: Brush Script MT;
+font-size: 20pt;
+color: #2a486e;
+}
+
+.c {
+    border: 2px solid #333;
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #FFFCC;
+    background-color: #5a7494;
+  }
+
+.button{
+background-color: #8cabd1;
+font-size: 12pt;
+}
+
+    </style>
+
+
+</head>
+<body style="background-color:#CCFFCC">
+<h2>Автомобили volkswagen</h2>
+
+<table>
+    <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Year</th>
+    </tr>
+    <tr>
+        <td>Volkswagen</td>
+        <td>Polo</td>
+        <td>2022</td>
+    </tr>
+    <tr>
+        <td>Volkswagen</td>
+        <td>Tiguan</td>
+        <td>2022</td>
+    </tr>
+    <tr>
+        <td>Volkswagen</td>
+        <td>Passat</td>
+        <td>2022</td>
+    </tr>
+    <tr>
+        <td>Volkswagen</td>
+        <td>Taos</td>
+        <td>2022</td>
+    </tr>
+</table>
+<h3 style="margin-top: 40px;" type="question">Предлагаем вам пройти небольшой опрос: </h3>
+<h4 style="margin-top: 10px;" type="question">1. Какой тип авто вам нравится?</h4>
+
+<form>
+    <label for="type">Легковая или паркетник? </label><br>
+    <input type="text" id="type" name="car_type"><br>
+    <label for="transmission">Тип коробки передач :</label><br>
+    <input type="text" id="transmission" name="car_transmission"><br><br>
+</form>
+
+
+
+<h4 type="question" style="margin-top: 10px;" >2. Есть ли у вас сейчас машина?</h4>
+
+<div>
+    <input type="checkbox" id="yes" name="yes_answer">
+    <label for="yes"> Да.</label><br>
+    <input type="checkbox" id="no" name="no_answer">
+    <label for="no"> Нет.</label><br>
+    <input type="checkbox" id="had" name="had_answer">
+    <label for="had"> Раньше была.</label><br><br>
+    <button type="button" class="button">Отправить</button>
+</div>
+<div id="test_drive">
+    <h3 type="question" style="margin-top: 40px;">Заинтересовались нашим предложением?</h3>
+        <button type="button" class="button">Запись к менеджеру</button>
+    </form>
+</div>
+
+<h3 style="margin-bottom: 3px;">Наш сайт: </h3>
+<a class="c" href="https://www.volkswagen.by.html" >volkswagen.by</a>
+</body>
+</html>
