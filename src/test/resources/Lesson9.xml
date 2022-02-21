@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Lesson9">
+    <parameter name="browser" value="CHROME"/>
+    <parameter name="url" value="https://www.saucedemo.com/"/>
+    <test name="Check_Authorization">
+        <classes>
+            <class name="Lesson9.LogIn"/>
+        </classes>
+    </test>
+    <test name="Lesson9">
+        <classes>
+            <class name="Lesson9.Lesson9"/>
+        </classes>
+    </test>
+</suite>
