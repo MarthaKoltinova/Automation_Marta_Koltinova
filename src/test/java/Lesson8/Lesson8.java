@@ -17,7 +17,7 @@ public class Lesson8 extends BaseTest {
     public void checkFirstValueInList() {
        driver.get("C:\\Users\\marta\\IdeaProjects\\Automation_Marta_Koltinova\\src\\test\\java\\Lesson8\\index.html");
         //Создать коллекцию из значений в первой колонке
-        List<String> brandsStringList = driver.findElements(By.cssSelector("//tr//td")).stream().map(el -> el.getText()).collect(Collectors.toList());
+        List<String> brandsStringList = driver.findElements(By.cssSelector("//tr/td")).stream().map(el -> el.getText()).collect(Collectors.toList());
         Assert.assertEquals(brandsStringList.get(0), "Volkswagen");
     }
 
@@ -41,6 +41,6 @@ public class Lesson8 extends BaseTest {
         driver.findElement(By.className("button")).click();
         driver.findElement(By.xpath("//button[contains(text(),'Запись')]")).click();
         driver.findElement(By.tagName("a")).click();
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.volkswagen.by.html");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.volkswagen.by.html/");
     }
 }
