@@ -13,12 +13,12 @@ public class BaseTest {
     @BeforeTest
     public void precondition(ITestContext context) {
         this.context = context;
-        this.driver = getDriver(context.getSuite().getParameter("browser"));
+        this.browserName = context.getSuite().getParameter("browser") == null ? System.getProperty("browser") : context.getSuite().getParameter("browser");
+        this.driver = getDriver(browserName == null ? "chrome" : browserName);
     }
 
     @AfterTest
     public void postcondition() {
-        closeDriver(context.getSuite().getParameter("browser"));
+        closeDriver(browserName == null ? "chrome" : browserName);
     }
-
 }
