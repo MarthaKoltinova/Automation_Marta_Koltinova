@@ -12,28 +12,40 @@ public class Login extends BaseTest {
         driver.get(context.getSuite().getParameter("url"));
     }
 
-    @Test(priority = 1)
+    @Test(description = "First negative test",priority = 1)
+    @Description("Entering wrong login")
+    @Step("1. Login is wrong")
+    @Link("https://instagram.com/")
     public void negative1LoginTest() {
         get(HomePage.class).verifyPage();
         get(HomePage.class).logIn("standard_user", "password");
         get(CatalogTestPage.class).verifyPage();
     }
 
-    @Test(priority = 2)
+    @Test(description = "Second negative test",priority = 2)
+    @Description("Entering wrong login")
+    @Step("2. Login is wrong")
+    @Link("https://instagram.com/")
     public void negative2LoginTest() {
         get(HomePage.class).verifyPage();
         get(HomePage.class).logIn("locked_out_user", "password");
         get(CatalogTestPage.class).verifyPage();
     }
 
-    @Test(priority = 3)
+    @Test(description = "Third negative test",priority = 3)
+    @Description("Entering wrong login")
+    @Step("3. Login is wrong")
+    @Link("https://instagram.com/")
     public void negative3LoginTest() {
         get(HomePage.class).verifyPage();
         get(HomePage.class).logIn("username", "secret_sauced");
         get(CatalogTestPage.class).verifyPage();
     }
 
-    @Test(priority = 4)
+    @Test(description = "Positive test",priority = 4)
+    @Description("Entering right login")
+    @Step("4. Login is correct")
+    @Link("https://instagram.com/")
     public void positiveLoginTest() {
         get(HomePage.class).verifyPage();
         get(HomePage.class).logIn("standard_user", "secret_sauce");
