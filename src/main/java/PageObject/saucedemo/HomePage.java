@@ -11,7 +11,6 @@ public class HomePage extends BasePage {
     private By loginButton = By.name("login-button");
     private  By logo=By.className("login_logo");
 
-
     public void sendUserName(String username) {
         driver.findElement(login).sendKeys(username);
     }
@@ -41,3 +40,4 @@ public class HomePage extends BasePage {
     }
 
 }
+
