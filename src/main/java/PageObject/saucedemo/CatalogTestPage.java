@@ -3,20 +3,26 @@ package PageObject.saucedemo;
 import PageObject.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class CatalogTestPage extends BasePage {
-    private By addToCard = By.name("add-to-cart-sauce-labs-backpack");
+    By addToCard = By.xpath("//*[@class='pricebar']//button");
+    List<WebElement> list = driver.findElements(addToCard);
+
     private By shoppingCard = By.className("shopping_cart_link");
     private By count = By.className("shopping_cart_badge");
     private By title = By.className("title");
 
 
-    public CatalogTestPage addItem() {
-        driver.findElement(addToCard).click();
+    public CatalogTestPage addItem(int a) {
+        list.get(a).click();
         return this;
 
     }
+
     public CatalogTestPage goToShoppingCard() {
         driver.findElement(shoppingCard).click();
         return this;
@@ -27,7 +33,7 @@ public class CatalogTestPage extends BasePage {
         return this;
     }
 
-    private CatalogTestPage(WebDriver driver) {
+    public CatalogTestPage(WebDriver driver) {
         super(driver);
     }
 
@@ -36,3 +42,4 @@ public class CatalogTestPage extends BasePage {
         Assert.assertTrue(driver.findElement(title).isDisplayed());
     }
 }
+
